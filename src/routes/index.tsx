@@ -1,25 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  type MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, type MotionValue } from "framer-motion";
 import heroImg from "@/assets/hero-discs.jpg";
 import logoImg from "@/assets/logo-3ptech.png";
-import {
-  ArrowUpRight,
-  Code2,
-  Cpu,
-  Cog,
-  Cloud,
-  Sparkles,
-  Shield,
-  Zap,
-  Globe,
-} from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Cog, Cloud, Sparkles, Shield, Zap, Globe } from "lucide-react";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useSpring(useTransform(value, [0, 1], [0, distance]), {
@@ -53,14 +37,28 @@ function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-30 px-6 md:px-12 py-6 flex items-center justify-between">
       <a href="#top" className="flex items-center gap-2 text-primary-foreground">
-        <img src={logoImg} alt="3P Tech logo" className="h-36 w-36 object-contain drop-shadow-xl" width={288} height={288} />
+        <img
+          src={logoImg}
+          alt="3P Tech logo"
+          className="h-36 w-36 object-contain drop-shadow-xl"
+          width={288}
+          height={288}
+        />
         <span className="sr-only">3P Tech</span>
       </a>
       <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/90">
-        <a href="#services" className="hover:text-primary-foreground">Services</a>
-        <a href="#how" className="hover:text-primary-foreground">How it works</a>
-        <a href="#about" className="hover:text-primary-foreground">About</a>
-        <a href="#contact" className="hover:text-primary-foreground">Contact</a>
+        <a href="#services" className="hover:text-primary-foreground">
+          Services
+        </a>
+        <a href="#how" className="hover:text-primary-foreground">
+          How it works
+        </a>
+        <a href="#about" className="hover:text-primary-foreground">
+          About
+        </a>
+        <a href="#contact" className="hover:text-primary-foreground">
+          Contact
+        </a>
       </nav>
       <div className="flex items-center gap-3">
         <button className="hidden sm:inline-flex h-10 items-center rounded-full px-5 text-sm text-primary-foreground/90 hover:bg-white/10 transition">
@@ -96,11 +94,7 @@ function Hero() {
   const yC = useParallax(scrollYProgress, 180);
 
   return (
-    <section
-      ref={ref}
-      id="top"
-      className="relative min-h-[100vh] overflow-hidden hero-bg"
-    >
+    <section ref={ref} id="top" className="relative min-h-[100vh] overflow-hidden hero-bg">
       <Nav />
       <motion.img
         src={heroImg}
@@ -202,29 +196,28 @@ function Services() {
   const yGrid = useParallax(scrollYProgress, 60);
 
   return (
-    <section ref={ref} id="services" className="warm-bg py-28 md:py-40 px-6 md:px-12 overflow-hidden">
+    <section
+      ref={ref}
+      id="services"
+      className="warm-bg py-28 md:py-40 px-6 md:px-12 overflow-hidden"
+    >
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           style={{ y: yHeading }}
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16"
         >
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
-              What we build
-            </p>
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">What we build</p>
             <h2 className="text-5xl md:text-7xl text-balance max-w-3xl">
               Engineering across the entire stack.
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground text-lg">
-            Six focused practices, one team. We pair design, engineering and
-            operations so your product ships and keeps shipping.
+            Six focused practices, one team. We pair design, engineering and operations so your
+            product ships and keeps shipping.
           </p>
         </motion.div>
-        <motion.div
-          style={{ y: yGrid }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
+        <motion.div style={{ y: yGrid }} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((s, i) => (
             <motion.article
               key={s.title}
@@ -265,9 +258,7 @@ function HowItWorks() {
   return (
     <section id="how" className="bg-tech-blue text-foreground py-28 md:py-40 px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
-        <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
-          How it works
-        </p>
+        <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How it works</p>
         <h2 className="text-5xl md:text-7xl mb-16 text-balance max-w-4xl text-foreground">
           Simple, fast & reliable delivery.
         </h2>
@@ -303,7 +294,10 @@ function Showcase() {
           style={{ y: yImg, rotate }}
           className="relative rounded-[2rem] overflow-hidden will-change-transform"
         >
-          <div style={{ boxShadow: "var(--shadow-glow)" }} className="rounded-[2rem] overflow-hidden bg-gradient-to-br from-secondary to-background p-10 md:p-16 flex items-center justify-center">
+          <div
+            style={{ boxShadow: "var(--shadow-glow)" }}
+            className="rounded-[2rem] overflow-hidden bg-gradient-to-br from-secondary to-background p-10 md:p-16 flex items-center justify-center"
+          >
             <motion.img
               src={logoImg}
               alt="3P Tech logo — circuit-board emblem"
@@ -316,16 +310,13 @@ function Showcase() {
           </div>
         </motion.div>
         <motion.div style={{ y: yText }}>
-          <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
-            Platform
-          </p>
+          <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Platform</p>
           <h2 className="text-5xl md:text-6xl mb-6 text-balance">
-            Custom systems? Sure. AI agents? Check. Always-on support? Also
-            check.
+            Custom systems? Sure. AI agents? Check. Always-on support? Also check.
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-            From the first prototype to the platform powering thousands of
-            users, 3P Tech is your long-term engineering partner.
+            From the first prototype to the platform powering thousands of users, 3P Tech is your
+            long-term engineering partner.
           </p>
           <div className="grid grid-cols-2 gap-6 mb-10 max-w-md">
             {[
@@ -358,18 +349,18 @@ function Showcase() {
 function About() {
   return (
     <section id="about" className="warm-bg pb-28 md:pb-40 px-6 md:px-12">
-      <div className="max-w-[1100px] mx-auto rounded-[2.5rem] bg-card border border-border/60 p-10 md:p-16" style={{ boxShadow: "var(--shadow-card)" }}>
-        <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
-          About 3P Tech AB
-        </p>
+      <div
+        className="max-w-[1100px] mx-auto rounded-[2.5rem] bg-card border border-border/60 p-10 md:p-16"
+        style={{ boxShadow: "var(--shadow-card)" }}
+      >
+        <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">About 3P Tech AB</p>
         <h2 className="text-4xl md:text-6xl mb-8 text-balance">
           A Gothenburg-based technology company.
         </h2>
         <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
           <p>
-            3P Tech AB is a Gothenburg-based technology company that develops
-            and delivers innovative technical solutions for both businesses and
-            individuals. Our work spans:
+            3P Tech AB is a Gothenburg-based technology company that develops and delivers
+            innovative technical solutions for both businesses and individuals. Our work spans:
           </p>
           <ul className="space-y-4 list-none">
             {[
@@ -385,9 +376,8 @@ function About() {
             ))}
           </ul>
           <p>
-            Our purpose is to offer scalable, high-quality tech solutions that
-            simplify, streamline and improve our customers' digital
-            operations.
+            Our purpose is to offer scalable, high-quality tech solutions that simplify, streamline
+            and improve our customers' digital operations.
           </p>
         </div>
       </div>
@@ -424,17 +414,28 @@ function Footer() {
         <div>
           <div className="font-display text-3xl text-background mb-3">3P Tech AB</div>
           <p className="text-sm max-w-xs">
-            Gothenburg, Sweden. Building software, AI and infrastructure for
-            modern teams.
+            Gothenburg, Sweden. Building software, AI and infrastructure for modern teams.
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 text-sm">
           <div>
             <div className="text-background mb-3 font-medium">Company</div>
             <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-background">About</a></li>
-              <li><a href="#services" className="hover:text-background">Services</a></li>
-              <li><a href="#contact" className="hover:text-background">Contact</a></li>
+              <li>
+                <a href="#about" className="hover:text-background">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-background">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-background">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
           <div>
