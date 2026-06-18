@@ -10,9 +10,9 @@ export default defineConfig({
   nitro: {
     preset: "vercel",
     output: {
-      dir: ".output",
-      publicDir: ".output/public",
-      serverDir: ".output/server",
+      dir: ".vercel/output",
+      publicDir: ".vercel/output/static",
+      serverDir: ".vercel/output/functions/__server.func",
     },
     routeRules: {},
     compatibilityDate: "2024-01-01",

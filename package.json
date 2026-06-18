@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "postbuild": "node -e \"require('fs').writeFileSync('.output/server/package.json', '{\\\"type\\\":\\\"module\\\"}')\"",
+    "postbuild": "node -e \"require('fs').writeFileSync('.vercel/output/functions/__server.func/package.json', '{\\\"type\\\":\\\"module\\\"}')\"",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
