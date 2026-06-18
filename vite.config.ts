@@ -14,6 +14,13 @@ export default defineConfig({
       publicDir: ".output/public",
       serverDir: ".output/server",
     },
+    routeRules: {},
+    compatibilityDate: "2024-01-01",
+    vercel: {
+      functions: {
+        runtime: "nodejs20.x",
+      },
+    },
   },
   tanstackStart: {
     server: { preset: "vercel" },
