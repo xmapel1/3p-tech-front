@@ -209,7 +209,7 @@ function Services() {
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">What we build</p>
             <h2 className="text-5xl md:text-7xl text-balance max-w-3xl">
-              Engineering across the entire stack.
+              Test across the entire stack.
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground text-lg">
