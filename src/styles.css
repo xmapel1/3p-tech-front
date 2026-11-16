@@ -91,6 +91,112 @@
   --ring: oklch(0.72 0.2 30);
 }
 
+/* ---------- VIOLET ---------- */
+.theme-violet {
+  --background: oklch(0.99 0.005 300);
+  --foreground: oklch(0.18 0.03 295);
+  --card-foreground: oklch(0.18 0.03 295);
+  --popover-foreground: oklch(0.18 0.03 295);
+  --primary: oklch(0.55 0.24 295);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.02 300);
+  --secondary-foreground: oklch(0.22 0.03 295);
+  --muted: oklch(0.96 0.01 300);
+  --muted-foreground: oklch(0.5 0.03 295);
+  --accent: oklch(0.88 0.08 310);
+  --accent-foreground: oklch(0.18 0.03 295);
+  --border: oklch(0.9 0.015 300);
+  --input: oklch(0.92 0.015 300);
+  --ring: oklch(0.55 0.24 295);
+
+  --hero-gradient: linear-gradient(
+    135deg,
+    oklch(0.6 0.22 280) 0%,
+    oklch(0.65 0.22 300) 45%,
+    oklch(0.75 0.17 325) 100%
+  );
+  --warm-gradient: linear-gradient(180deg, oklch(0.99 0.005 300) 0%, oklch(0.96 0.03 300) 100%);
+  --tech-gradient: linear-gradient(
+    160deg,
+    oklch(0.95 0.04 300) 0%,
+    oklch(0.89 0.08 295) 55%,
+    oklch(0.82 0.12 290) 100%
+  );
+  --shadow-glow: 0 30px 80px -20px oklch(0.55 0.24 295 / 0.35);
+  --shadow-card: 0 20px 50px -25px oklch(0.4 0.1 295 / 0.25);
+}
+
+.dark.theme-violet {
+  --background: oklch(0.15 0.025 295);
+  --foreground: oklch(0.98 0.01 300);
+  --card: oklch(0.2 0.025 295);
+  --card-foreground: oklch(0.98 0.01 300);
+  --popover: oklch(0.2 0.025 295);
+  --popover-foreground: oklch(0.98 0.01 300);
+  --primary: oklch(0.7 0.19 295);
+  --primary-foreground: oklch(0.15 0.025 295);
+  --secondary: oklch(0.25 0.025 295);
+  --secondary-foreground: oklch(0.98 0.01 300);
+  --muted: oklch(0.25 0.025 295);
+  --muted-foreground: oklch(0.7 0.03 300);
+  --accent: oklch(0.3 0.06 295);
+  --accent-foreground: oklch(0.98 0.01 300);
+  --ring: oklch(0.7 0.19 295);
+}
+
+/* ---------- OCEAN ---------- */
+.theme-ocean {
+  --background: oklch(0.99 0.004 240);
+  --foreground: oklch(0.18 0.03 245);
+  --card-foreground: oklch(0.18 0.03 245);
+  --popover-foreground: oklch(0.18 0.03 245);
+  --primary: oklch(0.55 0.19 245);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.02 235);
+  --secondary-foreground: oklch(0.22 0.03 245);
+  --muted: oklch(0.96 0.01 235);
+  --muted-foreground: oklch(0.5 0.03 245);
+  --accent: oklch(0.88 0.08 210);
+  --accent-foreground: oklch(0.18 0.03 245);
+  --border: oklch(0.9 0.015 235);
+  --input: oklch(0.92 0.015 235);
+  --ring: oklch(0.55 0.19 245);
+
+  --hero-gradient: linear-gradient(
+    135deg,
+    oklch(0.58 0.19 262) 0%,
+    oklch(0.65 0.17 238) 45%,
+    oklch(0.78 0.12 205) 100%
+  );
+  --warm-gradient: linear-gradient(180deg, oklch(0.99 0.004 240) 0%, oklch(0.96 0.03 235) 100%);
+  --tech-gradient: linear-gradient(
+    160deg,
+    oklch(0.95 0.04 230) 0%,
+    oklch(0.89 0.07 235) 55%,
+    oklch(0.82 0.11 240) 100%
+  );
+  --shadow-glow: 0 30px 80px -20px oklch(0.55 0.19 245 / 0.35);
+  --shadow-card: 0 20px 50px -25px oklch(0.4 0.1 245 / 0.25);
+}
+
+.dark.theme-ocean {
+  --background: oklch(0.15 0.025 245);
+  --foreground: oklch(0.98 0.01 235);
+  --card: oklch(0.2 0.025 245);
+  --card-foreground: oklch(0.98 0.01 235);
+  --popover: oklch(0.2 0.025 245);
+  --popover-foreground: oklch(0.98 0.01 235);
+  --primary: oklch(0.72 0.15 240);
+  --primary-foreground: oklch(0.15 0.025 245);
+  --secondary: oklch(0.25 0.025 245);
+  --secondary-foreground: oklch(0.98 0.01 235);
+  --muted: oklch(0.25 0.025 245);
+  --muted-foreground: oklch(0.7 0.03 235);
+  --accent: oklch(0.3 0.06 235);
+  --accent-foreground: oklch(0.98 0.01 235);
+  --ring: oklch(0.72 0.15 240);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -134,10 +240,13 @@
 }
 
 @utility bg-tech-blue {
-  background-image: linear-gradient(
-    160deg,
-    oklch(0.94 0.05 55) 0%,
-    oklch(0.88 0.09 50) 55%,
-    oklch(0.82 0.12 45) 100%
+  background-image: var(
+    --tech-gradient,
+    linear-gradient(
+      160deg,
+      oklch(0.94 0.05 55) 0%,
+      oklch(0.88 0.09 50) 55%,
+      oklch(0.82 0.12 45) 100%
+    )
   );
 }
