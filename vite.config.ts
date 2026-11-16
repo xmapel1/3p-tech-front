@@ -18,7 +18,7 @@ export default defineConfig({
     compatibilityDate: "2024-01-01",
     vercel: {
       functions: {
-        runtime: "nodejs20.x",
+        runtime: "nodejs24.x",
       },
     },
   },
